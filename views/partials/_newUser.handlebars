@@ -1,0 +1,19 @@
+{{#if this.id}}
+{{!-- Show edit card --}}
+<form action="/edit/{{this.id}}" method="post" class="form">
+    <label for="firstName">New First Name</label>
+    <input type="text" name="firstName" id="firstName" value="{{this.firstName}}">
+    <label for="lastName">New Last Name</label>
+    <input type="text" name="lastName" id="lastName" value="{{this.lastName}}">
+    <input class="submit" type="submit" value="SUBMIT">
+</form>
+{{else}}
+{{!-- Show add card --}}
+<form action="/" method="post" class="form">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" id="firstName">
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" id="lastName">
+    <input class="submit" type="submit" value="SUBMIT">
+</form>
+{{/if}}
